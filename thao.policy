@@ -1,0 +1,62 @@
+grant codeBase "file:/C:/Program%20Files/Java/jdk1.8.0_101/jre/lib/ext/*" {
+  permission java.security.AllPermission;
+};
+
+
+grant {
+	permission "java.util.PropertyPermission" "os.name", "read";
+  	permission "java.util.PropertyPermission" "os.version", "read";
+  	permission "java.util.PropertyPermission" "os.arch", "read";
+  	permission "java.util.PropertyPermission" "java.version", "read";
+  	permission "java.util.PropertyPermission" "path.separator", "read";
+  	permission "java.util.PropertyPermission" "java.vm.name", "read";
+  	permission "java.util.PropertyPermission" "user.dir", "read";
+  	permission "java.util.PropertyPermission" "user.name", "read";
+
+  	permission "java.util.PropertyPermission" "webdriver.chrome.*", "read,write";
+  	permission "java.net.SocketPermission" "localhost:*", "listen,resolve";
+
+  	permission "java.io.FilePermission" ".", "read";
+  	permission "java.io.FilePermission" ".data", "read,write";
+	permission "java.io.FilePermission" "${user.home}${/}.m2/repository/com/relevantcodes/extentreports/2.0/*", "read";
+  	permission "java.lang.RuntimePermission" "getenv.*";
+  	permission "java.lang.RuntimePermission" "loadLibrary.sunec";
+  	permission "java.net.NetPermission" "getProxySelector";
+  	permission "java.util.logging.LoggingPermission" "control";
+  	permission "java.net.SocketPermission" "localhost:*", "connect,resolve";
+  	permission "java.io.FilePermission" "${user.home}${/}AppData\\Local\\Temp\\idea_testng.tmp", "read";
+	permission "java.util.PropertyPermission" "jcommander.debug", "read";
+	permission "java.lang.RuntimePermission" "accessDeclaredMembers";
+	permission "java.io.FilePermission" "${user.home}${/}.IntelliJIdea*\\system\\temp-testng-customsuite.xml", "read";
+	permission "java.net.SocketPermission" "testng.org:80", "connect,listen,resolve";
+	permission "java.util.PropertyPermission" "skip.caller.clsLoader", "read";
+	permission "java.io.FilePermission" "D:\\policy\\reports", "read,write";
+	permission "java.io.FilePermission" "D:\\policy\\reports\\-", "read,write";
+	permission "java.util.PropertyPermission" "user.language", "write,read";
+	permission "java.util.PropertyPermission" "org.freemarker.loggerLibrary", "write,read";
+	permission "java.io.FilePermission" "application.properties", "read";
+	permission "java.io.FilePermission" "${user.home}${/}AppData\\Local\\Temp\\*", "read,write,delete";
+	permission "java.io.FilePermission" "target/classes/-", "read";
+	permission "java.io.FilePermission" "src/main/resources/-", "read,execute";
+	permission "java.util.PropertyPermission" "testng.*", "read";
+	permission "java.util.PropertyPermission" "line.separator", "read";
+	permission "java.util.PropertyPermission" "fileStringBuffer", "read";
+	permission "java.util.PropertyPermission" "dataproviderthreadcount", "read";
+	permission "java.util.PropertyPermission" "stacktrace.success.output.level", "read";
+	permission "java.util.PropertyPermission" "oldTestngEmailableReporter", "read";
+	permission "java.util.PropertyPermission" "noEmailableReporter", "read";
+	permission "java.io.FilePermission" "test-output", "read";
+	permission "java.io.FilePermission" "test-output/*", "read,write";
+	permission "java.util.PropertyPermission" "emailable.report2.name", "read";
+	permission "java.io.FilePermission" "test-output/junitreports/*", "read,write,delete";
+	permission "java.lang.reflect.ReflectPermission" "suppressAccessChecks";
+	permission "java.io.FilePermission" "test-output/-", "read,delete,write";
+    permission "java.io.FilePermission" "${user.home}${/}.m2/repository/org/testng/testng/6.13.1/*", "read";
+    permission "java.lang.RuntimePermission" "modifyThread";
+
+};
+//-Djava.security.manager -Djava.security.policy==thao.policy
+
+
+
+
